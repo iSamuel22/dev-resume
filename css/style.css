@@ -1,0 +1,183 @@
+/* Base styles */
+:root {
+    --background-color: #0d1117;
+    --card-bg-color: #161b22;
+    --card-hover-color: #21262d;
+    --text-color: #f0f6fc;
+    --accent-color: #58a6ff;
+    --secondary-color: #8b949e;
+    --success-color: #3fb950;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: var(--card-bg-color);
+    border: 3px solid var(--accent-color);
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.profile-name {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.profile-tag {
+    font-family: 'Fira Code', monospace;
+    color: var(--success-color);
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.profile-bio {
+    opacity: 0.8;
+    margin: 0.8rem 0;
+    max-width: 90%;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+/* Link styles */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    border: 1px solid rgba(240, 246, 252, 0.1);
+    position: relative;
+}
+
+.link-card:hover {
+    background-color: var(--card-hover-color);
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+.link-card i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    width: 24px;
+    text-align: center;
+}
+
+.link-card .arrow {
+    position: absolute;
+    right: 20px;
+    opacity: 0.5;
+    transition: transform 0.2s ease;
+}
+
+.link-card:hover .arrow {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+.link-text {
+    flex: 1;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.code-comment {
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .profile-name {
+        font-size: 1.8rem;
+    }
+    
+    .link-card {
+        padding: 14px 16px;
+    }
+}
+
+/* Animation styles */
+header {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.link-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Terminal-style cursor effect */
+.profile-bio::after {
+    content: '|';
+    display: inline-block;
+    animation: cursor-blink 1.2s infinite;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
