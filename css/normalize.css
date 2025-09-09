@@ -1,4 +1,3 @@
-/* Base styles */
 :root {
     --background-color: #121212;
     --text-color: #ffffff;
@@ -24,7 +23,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Header styles */
 header {
     display: flex;
     flex-direction: column;
@@ -58,7 +56,6 @@ header {
     margin: 0 0 20px 0;
 }
 
-/* Link styles */
 .links {
     display: flex;
     flex-direction: column;
@@ -87,7 +84,6 @@ header {
     margin-right: 10px;
 }
 
-/* Footer styles */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -95,16 +91,15 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .container {
         padding: 30px 15px;
     }
-    
+
     .profile-name {
         font-size: 1.8rem;
     }
-    
+
     .link-card {
         padding: 14px 16px;
     }

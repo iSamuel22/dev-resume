@@ -1,4 +1,3 @@
-/* Base styles */
 :root {
     --background-color: #0d1117;
     --card-bg-color: #161b22;
@@ -27,7 +26,6 @@ body {
     padding: 40px 20px;
 }
 
-/* Header styles */
 header {
     display: flex;
     flex-direction: column;
@@ -79,7 +77,6 @@ header {
     font-size: 0.95rem;
 }
 
-/* Link styles */
 .links {
     display: flex;
     flex-direction: column;
@@ -130,7 +127,6 @@ header {
     flex: 1;
 }
 
-/* Footer styles */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -141,22 +137,20 @@ footer {
     color: var(--secondary-color);
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
     .container {
         padding: 30px 15px;
     }
-    
+
     .profile-name {
         font-size: 1.8rem;
     }
-    
+
     .link-card {
         padding: 14px 16px;
     }
 }
 
-/* Animation styles */
 header {
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -168,7 +162,6 @@ header {
     transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Terminal-style cursor effect */
 .profile-bio::after {
     content: '|';
     display: inline-block;
@@ -178,6 +171,11 @@ header {
 }
 
 @keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
